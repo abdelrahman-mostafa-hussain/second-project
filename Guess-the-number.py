@@ -5,13 +5,13 @@ def numberGenerator()->int:
 
 def hint(num:int):
         if 20>=num>15 :
-            print("hint: the number is too high ")
+            print("Hint: the number is too high ")
         elif 15>=num>10 :
-            print("hint: the number is high ")
+            print("Hint: the number is high ")
         elif 10>=num>5 :
-            print("hint: the number is low ")
+            print("Hint: the number is low ")
         else:
-            print("hint: the number is too low ")
+            print("Hint: the number is too low ")
 
 def main():
     print("Welcome to guess the number game, you will guess number between 1 and 20, lets start:")
@@ -20,21 +20,21 @@ def main():
         hint(randNum)
         chance=2
         while True:
-            numberguessed=int(input("please enter the number you guessed: "))
+            numberguessed=int(input("Please enter the number you guessed: "))
             if randNum==numberguessed:
-                print("your guess is correct")
+                print("Your guess is correct")
                 break
             else:
                 if chance==0:
-                    print("your guess was wrong and consume your chances")
+                    print("Your guess was wrong and consume your chances")
                     break
-                print('your guess was wrong try again')
+                print('Your guess was wrong try again')
                 chance-=1
-        quit=input("(if you want to quit the game press q or press enter to continue):")
+        quit=input("(If you want to quit the game press q or Press enter to continue):")
         if quit.lower()=="q":
-            print('thank to play our game')
+            print('Thank to play our game')
             break
-        print("let's try another round")
+        print("Let's try another round")
 
 if __name__=="__main__":
     main()
