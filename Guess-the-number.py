@@ -3,7 +3,7 @@ import random
 def numberGenerator()->int:
     return random.choice(range(1,20))
 
-def hint(num:int):
+def hint(num:int)->None:
         if 20>=num>15 :
             print("Hint: the number is too high ")
         elif 15>=num>10 :
@@ -18,9 +18,9 @@ def main():
     while True:
         randNum=numberGenerator()
         hint(randNum)
-        chance=2
+        chance:int=2
         while True:
-            numberguessed=int(input("Please enter the number you guessed: "))
+            numberguessed:int=int(input("Please enter the number you guessed: "))
             if randNum==numberguessed:
                 print("Your guess is correct")
                 break
@@ -30,7 +30,7 @@ def main():
                     break
                 print('Your guess was wrong try again')
                 chance-=1
-        quit=input("(If you want to quit the game press q or Press enter to continue):")
+        quit:str=input("(If you want to quit the game press q or Press enter to continue):")
         if quit.lower()=="q":
             print('Thank to play our game')
             break
